@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "GCP Snippets"
+name = "GCP Snacks"
 package-mode = false
 
 [tool.poetry.dependencies]

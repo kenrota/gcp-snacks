@@ -44,7 +44,7 @@ def pull_messages(project_id: str, subscription_name: str) -> None:
 @functions_framework.cloud_event
 def main(cloud_event: CloudEvent) -> None:
     print(f"{cloud_event=}")
-    project_id = os.environ.get("PROJECT_ID")
-    subscription_name = os.environ.get("BUFFER_SUBSCRIPTION_NAME")
+    project_id = os.environ["PROJECT_ID"]
+    subscription_name = os.environ["BUFFER_SUBSCRIPTION_NAME"]
 
     pull_messages(project_id, subscription_name)

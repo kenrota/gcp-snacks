@@ -2,7 +2,7 @@ import argparse
 import json
 from concurrent import futures
 from datetime import datetime
-from google.cloud import pubsub_v1
+from google.cloud import pubsub_v1  # type: ignore[attr-defined]
 
 
 def send_messages(project_id: str, topic_name: str, num_messages: int) -> None:

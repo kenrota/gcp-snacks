@@ -2,7 +2,7 @@ import os
 import base64
 import json
 import functions_framework
-from google.cloud import storage
+from google.cloud import storage  # type: ignore[attr-defined]
 from cloudevents.http.event import CloudEvent
 
 

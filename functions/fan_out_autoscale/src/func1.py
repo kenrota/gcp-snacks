@@ -4,7 +4,7 @@ from concurrent import futures
 from datetime import datetime
 
 import functions_framework
-from google.cloud import pubsub_v1
+from google.cloud import pubsub_v1  # type: ignore[attr-defined]
 
 # バッチメッセージング
 # 参考ドキュメント: https://cloud.google.com/pubsub/docs/batch-messaging?hl=ja

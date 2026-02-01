@@ -3,7 +3,7 @@ import os
 from concurrent import futures
 from datetime import datetime
 import functions_framework
-from google.cloud import pubsub_v1
+from google.cloud import pubsub_v1  # type: ignore[attr-defined]
 
 batch_settings = pubsub_v1.types.BatchSettings(
     max_messages=5,

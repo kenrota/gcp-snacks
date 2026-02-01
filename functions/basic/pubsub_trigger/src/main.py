@@ -2,7 +2,7 @@ import os
 import base64
 import functions_framework
 from cloudevents.http.event import CloudEvent
-from google.cloud import storage
+from google.cloud import storage  # type: ignore[attr-defined]
 from google.api_core.exceptions import PreconditionFailed
 
 _storage = storage.Client()

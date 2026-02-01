@@ -9,7 +9,8 @@ def run_command(cmd: str) -> list[dict]:
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
     if result.returncode != 0:
         raise RuntimeError(f"Command failed: {result.stderr}")
-    return json.loads(result.stdout)
+    data: list[dict] = json.loads(result.stdout)
+    return data
 
 
 def list_vm_instances(project_id: str) -> list[dict]:

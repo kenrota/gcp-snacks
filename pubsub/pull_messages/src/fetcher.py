@@ -1,6 +1,6 @@
 import functions_framework
 from cloudevents.http.event import CloudEvent
-from google.cloud import pubsub_v1
+from google.cloud import pubsub_v1  # type: ignore[attr-defined]
 from google.api_core import retry
 import os
 

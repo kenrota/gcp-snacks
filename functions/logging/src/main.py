@@ -15,14 +15,14 @@ def main(_request):
     else:
         logging.basicConfig(level=logging.DEBUG)
 
-    additional_params = {"a": 1}
+    additional_params: dict = {"a": 1}
 
     # extra と json_fields を使うと、jsonPayload 内に additional_params の部分だけ含まれる。
     # ローカル環境では additional_params は表示されない。
     logging.error(msg="msg log", extra={"json_fields": additional_params})
 
     # ローカル環境でも additional_params は表示される。
-    log_message = {"message": "json dumps log"}
+    log_message: dict = {"message": "json dumps log"}
     log_message |= additional_params
     logging.error(json.dumps(log_message))
 
